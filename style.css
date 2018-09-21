@@ -7,6 +7,7 @@ html {
 
 body {
 		line-height: 1.3;
+		background-color: light-grey;
 }
 
 footer {
@@ -78,19 +79,11 @@ nav a:hover {
 
 .logo {
   position: absolute;
+		margin-top: -55px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 30%;
-}
-
-/* reponsive logo */
-
-@media (max-width: 800px) {
-
-.logo {
-		max-width: 50%;
-	}
+    max-width: 300px;
 }
 
 	h1,
@@ -311,10 +304,6 @@ h1 {
 	padding: 15% 0;
 }
 
-.logo {
-	max-width: 75%;
-}
-
 }
 
 /* parallax effect */
@@ -484,19 +473,6 @@ label {
 			}
 		}
 
-body {
-  font-family: Helvetica; 
-  font-weight: 400;
-  background: #ecf0f1;
-}
-h1 {
-  font-size: 1.5em;
-  text-align: center;
-  margin: 1.2em 0;
-  color: #555555;
-}
-
-
 /*Carousel*/
 .carrousel {
   background: #ffffff;
@@ -536,7 +512,7 @@ h1 {
   float: left;
 }
 .carrousel li p{
-  margin-top: 0;  
+  margin-top: 0;
 }
 .carrousel li q {
   max-width: 90%;
@@ -565,7 +541,7 @@ h1 {
   bottom: 1em;
   /*--- Centering trick---*/
     /* Absolute positioning*/
-    position: absolute; 
+    position: absolute;
     /* Abosulte positioning*/
     width: 104px; /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
     left: 50%; /*Centering de element*/
@@ -582,7 +558,7 @@ h1 {
   width: 10px;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  border: solid 2px #2980b9;
+  border: solid 2px #00BCD4;
   font-size: 0;
 }
 /* You have to repeat this with each slide
@@ -611,7 +587,7 @@ TODO: make it easier with SCSS
 .carrousel #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
 .carrousel #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
 .carrousel #radio-4:checked ~ .slidesNavigation label#dotForRadio-4 {
-  background: #2980b9;
+  background: #00BCD4;
 }
 
 @media  (max-width: 796px) {
