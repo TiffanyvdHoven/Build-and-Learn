@@ -1,0 +1,485 @@
+/*CSS Variables */
+
+html {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+		line-height: 1.3;
+}
+
+footer {
+	text-align: center;
+}
+
+.credits,
+.credits a {
+	font-size: 7px;
+	color: grey;
+	text-decoration: none;
+}
+
+/* Responsive flexbox navigation */
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+	list-style-type: none;
+}
+
+nav li {
+	padding: 2em;
+}
+
+nav a{
+	text-decoration: none;
+	color: black;
+}
+
+nav a:hover {
+	color: #00BCD4;
+}
+
+@media (max-width: 870px) {
+
+	nav .ul {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	nav li {
+		padding: 10px;
+		text-align: center;
+	}
+
+}
+
+/* Wrapper page grid  */
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+		max-width: 1300px; /* stop responsive on large screens */
+		 margin: auto; /* center on large screens */
+  }
+
+ .wrapper > * {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+/*#title {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+
+.logo {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 30%;
+}
+
+/* reponsive logo */
+
+@media (max-width: 800px) {
+
+.logo {
+		max-width: 50%;
+	}
+}
+
+	h1,
+	h2 {
+    text-align: center;
+		font-weight: 300;
+		font-size: 2.3125rem;
+  }
+
+	main {
+	  display: grid;
+	}
+
+  section {
+  justify-self: center;
+	}
+
+/* icon resizing */
+
+	.icon {
+		max-width: 4em;
+	}
+
+/* Responsive grid for about section */
+
+	#about {
+		display: grid;
+		grid-gap: 1px 2em;
+		grid-template-columns: repeat(3, 1fr);
+    	grid-template-rows: repeat(5, 1fr);
+		grid-template-areas:
+		"H H H"
+		"P P P"
+		"I1 I2 I3"
+		"H1 H2 H3"
+		"P1 P2 P3"
+		;
+	}
+
+	#about > * {
+		justify-self: center;
+	}
+
+	#about > h2 {
+		grid-area: H;
+	}
+
+	#headertext {
+		grid-area: P;
+	}
+
+	#icon1 {
+		grid-area: I1;
+	}
+
+	#icon2 {
+		grid-area: I2;
+	}
+
+	#icon3 {
+		grid-area: I3;
+	}
+
+	#webdevheader {
+		grid-area: H1;
+	}
+
+	#androidheader {
+		grid-area: H2;
+	}
+
+	#iosheader {
+		grid-area: H3;
+	}
+
+	#webdevtext {
+		grid-area: P1;
+	}
+
+	#androidtext {
+		grid-area: P2;
+	}
+
+	#iostext {
+		grid-area: P3;
+	}
+
+	@media (max-width: 874px) {
+		#about {
+			display: block;
+			text-align: center;
+		}
+	}
+
+
+/* Header background */
+
+h1 {
+	font-size: 2em;
+	color: white;
+}
+
+#main-header {
+	background-image: url("img/header-img.jpg");
+	background-size: cover;
+	padding: 15% 0;
+}
+
+/* Desktop and mobile menu */
+
+/* hide mobile menu button and mobile navigation menu on big screens */
+
+@media (min-width: 874px) {
+	#button {
+		display: none;
+	}
+
+	#mobile-nav {
+		display:none;
+	}
+
+
+
+/* fixed menu styling for large screens */
+
+	#fixed-desktop {
+		margin-top: -20px;
+		padding-bottom: : -20px;
+		height: 100px;
+	}
+
+	/* fix padding fixed menu */
+
+		#about,
+		#projects,
+		#reviews,
+		#sign-up{
+			padding-top: 80px;
+		}
+
+}
+
+/* hide desktop navigation menu on small screens */
+
+@media (max-width: 874px) {
+
+	#desktop-nav {
+		display:none;
+	}
+
+	/*  Fixed menu on mobile */
+
+	#fixed-mobile {
+		padding-top: 10px;
+	}
+
+/* style mobile menu icon  */
+
+	#button {
+		width: 20px;
+		padding: 5px;
+	}
+
+/* fix padding fixed menu */
+
+	#about,
+	#projects,
+	#reviews,
+	#sign-up {
+		padding-top: 20px;
+	}
+
+}
+
+/* fixed header for mobile and desktop */
+
+.fixed {
+	position: fixed;
+	top: 0px;
+	background: white;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Responsive grid for latest projects section */
+
+.flipcard-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-gap: 30px;
+}
+
+.flipcard-wrapper > * {
+	justify-content: center;
+}
+
+.photo {
+	height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* small screen sizes */
+
+@media (max-width: 400px) {
+
+.flipcard-wrapper {
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.wrapper {
+	grid-template-columns: 10px 1fr 10px;
+}
+
+.parallax {
+	background-image: url("img/header-img.jpg");
+	background-size: cover;
+	padding: 15% 0;
+}
+
+.logo {
+	max-width: 75%;
+}
+
+}
+
+/* parallax effect */
+
+.parallax {
+    background-image: url("img/header-img.jpg");
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+       -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(2px);
+}
+
+
+
+/* hover effect */
+
+.container {
+    position: relative;
+    width: auto;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text a {
+	background-color: #00BCD4;
+	color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 3px;
+}
+
+/* projects.html styling */
+
+#back-icon {
+	width: 20px;
+	padding: 5px;
+	margin: 5px 0px 20px 10px;
+}
+
+/* filter function project page */
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"][id="V1"]:checked ~ .V2,
+input[type="radio"][id="V1"]:checked ~ .V3 {
+	display:none
+}
+
+input[type="radio"][id="V2"]:checked ~ .V1,
+input[type="radio"][id="V2"]:checked ~ .V3 {
+	display:none
+}
+
+input[type="radio"][id="V3"]:checked ~ .V1,
+input[type="radio"][id="V3"]:checked ~ .V2 {
+	display:none
+}
+
+/* color active link */
+
+input[type="radio"]:checked + label {
+		color: #00BCD4;
+}
+
+/* flexbox project page with media queries */
+
+/* 1 column layout for mobile */
+
+label {
+	margin: 1.5em;
+}
+
+.tile {
+	margin: 10px;
+}
+
+/* 2 column layout  */
+
+@media (min-width: 715px) {
+
+	label {
+		width: 20%;
+		margin: auto;
+		text-align: center;
+	}
+
+	.flexbox {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.tile {
+		flex: 45%;
+	}
+
+}
+
+/* 3 column layout */
+
+@media (min-width: 1070px) {
+
+	label {
+		width: 20%;
+	}
+
+	.tile {
+		flex: 25%;
+	}
+
+}
+
+	/* project and sign up button styling  */
+
+	.button {
+		width: 50%;
+		margin: 30px 25% 0px 25%;
+		background-color: white;
+		border: solid 2px #00BCD4;
+		padding: 16px 32px;
+		border-radius: 3px;
+		font-size: 16px;
+		color:#00BCD4;
+		text-decoration: none;
+	}
+
+	.button:hover {
+		background-color: #00BCD4;
+		color: white;
+	}
+
+		@media (min-width: 800px) {
+			.button {
+				width: 20%;
+				margin: 30px 40% 0px 40%;
+			}
+		}
