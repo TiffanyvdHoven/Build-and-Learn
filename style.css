@@ -279,6 +279,22 @@ nav a:hover {
     background-size: cover;
 }
 
+@media (max-width: 600px) {
+
+	.header-img {
+		background-image: url("img/header-with-logo.svg");
+		height: 300px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+	}
+
+	.parallax {
+		display: none;
+	}
+
+}
 /* hover effect */
 
 .container {
