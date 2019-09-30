@@ -1,0 +1,2 @@
+User-agent: * #van toepassing op alle zoekmachines
+Sitemap: https://www.tiffanyvandenhoven.nl/sitemap.xml #linkt naar de sitemap
