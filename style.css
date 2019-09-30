@@ -1,15 +1,15 @@
 /*CSS Variables */
 
-html {
+* {
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	padding: 0;
 	margin: 0;
 }
 
 body {
-		line-height: 1.3;
-		background-color: light-grey;
+		line-height: 1.8em;
+		font-size: 16px;
 }
 
 footer {
@@ -20,15 +20,11 @@ h1,
 h2 {
 	text-align: center;
 	font-weight: 300;
-	font-size: 2.3125rem;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+	padding-bottom: 40px;
 }
 
-.credits,
-.credits a {
-	font-size: 7px;
-	color: grey;
-	text-decoration: none;
-}
 
 /* Responsive flexbox navigation */
 
@@ -36,6 +32,10 @@ nav ul {
 	display: flex;
 	justify-content: flex-end;
 	list-style-type: none;
+	padding-top: 1em;
+	width: 90%;
+	max-width: 1200px; /* stop responsive on large screens */
+	margin: auto; /* center on large screens */
 }
 
 nav li {
@@ -68,10 +68,9 @@ nav a:hover {
 /* Wrapper page grid  */
 
   .wrapper {
-    display: grid;
-    grid-template-columns: 1em 1fr 1em;
-		max-width: 1300px; /* stop responsive on large screens */
-		 margin: auto; /* center on large screens */
+    width: 90%;
+		max-width: 1100px; /* stop responsive on large screens */
+		margin: auto; /* center on large screens */
   }
 
  .wrapper > * {
@@ -87,82 +86,63 @@ nav a:hover {
   justify-self: center;
 	}
 
-/* icon resizing */
-
-	.icon {
-		max-width: 4em;
+	.section {
+		padding-bottom: 120px;
 	}
 
-/* Responsive grid for about section */
-
-	#about {
-		display: grid;
-		grid-gap: 1px 2em;
-		grid-template-columns: repeat(3, 1fr);
-    	grid-template-rows: repeat(5, 1fr);
-		grid-template-areas:
-		"H H H"
-		"P P P"
-		"I1 I2 I3"
-		"H1 H2 H3"
-		"P1 P2 P3"
-		;
+	/* padding sections */
+	#about,
+	#projects,
+	#reviews,
+	#sign-up{
+		padding-top: 80px;
 	}
 
-	#about > * {
-		justify-self: center;
-	}
+/* About section */
 
-	#about > h2 {
-		grid-area: H;
-	}
+.about-section {
+  margin-bottom: 40px;
+}
 
-	#headertext {
-		grid-area: P;
-	}
+.about-section > * {
+  text-align: left;
+}
 
-	#icon1 {
-		grid-area: I1;
-	}
+.flexbox {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
 
-	#icon2 {
-		grid-area: I2;
-	}
+#headertext {
+	text-align: center;
+	padding-bottom: 40px;
+}
 
-	#icon3 {
-		grid-area: I3;
-	}
+.aboud-section-h3 {
+	padding-bottom: 30px;
+	display: inline-block;
+	padding-left: 20px;
+}
 
-	#webdevheader {
-		grid-area: H1;
-	}
+.icon-color {
+	color: #00BCD4;
+}
 
-	#androidheader {
-		grid-area: H2;
-	}
+@media (min-width: 1000px) {
 
-	#iosheader {
-		grid-area: H3;
-	}
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
 
-	#webdevtext {
-		grid-area: P1;
-	}
-
-	#androidtext {
-		grid-area: P2;
-	}
-
-	#iostext {
-		grid-area: P3;
-	}
-
-	@media (max-width: 874px) {
-		#about {
-			display: block;
-			text-align: center;
-		}
-	}
+  .about-section {
+    width: 30%;
+    padding: 10px;
+  }
+}
 
 /* Desktop and mobile menu */
 
@@ -185,15 +165,6 @@ nav a:hover {
 		height: 100px;
 	}
 
-	/* fix padding fixed menu */
-
-		#about,
-		#projects,
-		#reviews,
-		#sign-up{
-			padding-top: 80px;
-		}
-
 }
 
 /* hide desktop navigation menu on small screens */
@@ -215,15 +186,6 @@ nav a:hover {
 	#button {
 		width: 20px;
 		padding: 5px;
-	}
-
-/* fix padding fixed menu */
-
-	#about,
-	#projects,
-	#reviews,
-	#sign-up {
-		padding-top: 20px;
 	}
 
 }
@@ -340,15 +302,67 @@ nav a:hover {
   border-radius: 3px;
 }
 
-/* projects.html styling */
 
-#back-icon {
-	width: 20px;
-	padding: 5px;
+	/* Button styling */
+
+	.button {
+		width: 50%;
+		margin: 60px 25% 0px 25%;
+		background-color: white;
+		border: solid 2px #00BCD4;
+		padding: 15px;
+		border-radius: 3px;
+		font-size: 16px;
+		color:#00BCD4;
+		text-decoration: none;
+	}
+
+	.button:hover {
+		background-color: #00BCD4;
+		color: white;
+	}
+
+		@media (min-width: 800px) {
+			.button {
+				width: 20%;
+				margin: 60px 40% 0px 40%;
+			}
+		}
+
+
+/* contact form */
+
+input {
+	border: none;
+  background-color: WhiteSmoke;
+	padding: 15px;
+	margin-bottom: 10px;
+	width: 445px;
+}
+
+select {
+background: #fff;
+border: none;
+text-align: left;
+padding: 15px;
+width: 445px;
+}
+
+.sign-up {
+	width: 33%;
+	margin-left: 33%;
+}
+
+
+
+/* ------ PROJECT PAGE STYLING ------  */
+
+.back-icon {
+	padding: 20px;
 	margin: 5px 0px 20px 10px;
 }
 
-/* filter function project page */
+/* filter function for project page */
 
 input[type="radio"] {
     display:none;
@@ -369,7 +383,7 @@ input[type="radio"][id="V3"]:checked ~ .V2 {
 	display:none
 }
 
-/* color active link */
+/* color active link project page */
 
 input[type="radio"]:checked + label {
 		color: #00BCD4;
@@ -424,168 +438,4 @@ label {
 		flex: 25%;
 	}
 
-}
-
-	/* project and sign up button styling  */
-
-	.button {
-		width: 50%;
-		margin: 30px 25% 0px 25%;
-		background-color: white;
-		border: solid 2px #00BCD4;
-		padding: 16px 32px;
-		border-radius: 3px;
-		font-size: 16px;
-		color:#00BCD4;
-		text-decoration: none;
-	}
-
-	.button:hover {
-		background-color: #00BCD4;
-		color: white;
-	}
-
-		@media (min-width: 800px) {
-			.button {
-				width: 20%;
-				margin: 30px 40% 0px 40%;
-			}
-		}
-
-/*Carousel*/
-.carrousel {
-  background: #ffffff;
-  text-align: center;
-  padding-top: 0;
-	padding-bottom: 1em;
-  height: 12em;
-  max-width: 750px;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-}
-.carrousel h2 {
-  margin: 0;
-  margin-top: -1.7em;
-  padding: 0;
-  font-size: 1em;
-  text-align: center;
-  color: #bbbbbb;
-}
-.carrousel .slides {
-  width: 400%;
-  left: 0;
-  padding-left: 0;
-  padding-top: 1em;
-  overflow: hidden;
-  list-style: none;
-  position: relative;
-
-  -webkit-transition: transform .5s;
-  -moz-transition: transform .5s;
-  -o-transition: transform .5s;
-  transition: transform .5s;
-}
-.carrousel .slides li {
-  width: 25%;
-  position: relative;
-  float: left;
-}
-.carrousel li p{
-  margin-top: 0;
-}
-.carrousel li q {
-  max-width: 90%;
-  margin: auto;
-  color: #666666;
-  font-size: 1.3em;
-  font-weight: bold;
-}
-.carrousel li img {
-  width:3em;
-  border-radius: 50%;
-  margin-left: -1.5em;
-  margin-right: 0.5em;
-  vertical-align: middle;
-}
-.carrousel li span.author {
-  margin-top:0.5em;
-  font-size: 1.2em;
-  color: #777777;
-  display: block;
-}
-.carrousel .slidesNavigation {
-  display: block;
-  list-style: none;
-  text-align: center;
-  top: 9em;
-  /*--- Centering trick---*/
-    /* Absolute positioning*/
-    position: absolute;
-    /* Abosulte positioning*/
-    width: 104px; /*This width  is the addition of the width of all the navigations dots - So in this case is   104 because the navigation dots are 26px (width:10px and 6px marginleft + 6 px marginright) and there are 4 dots so 4x26=104 */
-    left: 50%; /*Centering de element*/
-    margin-left: -52px; /*adjusting the centering by applying a negative margin of half of the width*/
-}
-.carrousel input {
-  display: none;
-}
-.carrousel .slidesNavigation label {
-  float: left;
-  margin: 6px;
-  display: block;
-  height: 10px;
-  width: 10px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: solid 2px #00BCD4;
-  font-size: 0;
-}
-/* You have to repeat this with each slide
-TODO: make it easier with SCSS
-25% movement 100/slides-num
-*/
-#radio-1:checked ~ .slides {
-  transform: translateX(0%);
-}
-#radio-2:checked ~ .slides {
-  transform: translateX(-25%);
-}
-#radio-3:checked ~ .slides {
-  transform: translateX(-50%);
-}
-#radio-4:checked ~ .slides {
-  transform: translateX(-75%);
-}
-
-
-.carrousel .slidesNavigation label:hover {
-   cursor: pointer;
-}
-/* You have to repeat this with each slide/dot */
-.carrousel #radio-1:checked ~ .slidesNavigation label#dotForRadio-1,
-.carrousel #radio-2:checked ~ .slidesNavigation label#dotForRadio-2,
-.carrousel #radio-3:checked ~ .slidesNavigation label#dotForRadio-3,
-.carrousel #radio-4:checked ~ .slidesNavigation label#dotForRadio-4 {
-  background: #00BCD4;
-}
-
-@media  (max-width: 796px) {
-  .carrousel{
-    height: 12em;
-  }
-}
-@media  (max-width: 480px) {
-  .carrousel li p {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-  .carrousel li q {
-      font-size: 1em;
-  }
-  .carrousel li img {
-     width:2em;
-     margin-left: -1em;
-     margin-right: 0.25em;
-  }
 }
