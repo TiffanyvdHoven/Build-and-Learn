@@ -83,7 +83,7 @@ nav a:hover {
   }
 
 	.section {
-		padding-bottom: 120px;
+		padding-bottom: 100px;
 	}
 
 	/* padding sections */
@@ -302,8 +302,9 @@ main {
 	/* Button styling */
 
 	.button {
-		width: 50%;
-		margin: 60px 25% 0px 25%;
+		width: 33%;
+		margin-left: 33%;
+		margin-right: 33%;
 		background-color: white;
 		border: solid 2px #00BCD4;
 		padding: 15px;
@@ -328,8 +329,15 @@ main {
 
 /* contact form */
 
-#sign-up * {
-	width: 80%;
+#sign-up > form {
+	width: 100%;
+	margin: auto;
+}
+
+.form-div {
+	margin: auto;
+	width: 100%;
+	max-width: 445px;
 }
 
 input {
@@ -337,7 +345,7 @@ input {
   background-color: WhiteSmoke;
 	padding: 15px;
 	margin-bottom: 10px;
-	width: 445px;
+	width: 100%;
 }
 
 select {
