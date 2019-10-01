@@ -234,7 +234,7 @@ main {
 	background-color: white;
 	position: absolute;
 	top: 70%;
-	left: 0%;
+	left: 0;
 	width: 100%;
 }
 
@@ -328,6 +328,10 @@ main {
 
 /* contact form */
 
+#sign-up * {
+	width: 80%;
+}
+
 input {
 	border: none;
   background-color: WhiteSmoke;
@@ -346,10 +350,8 @@ width: 445px;
 
 .sign-up {
 	width: 33%;
-	margin-left: 33%;
+	margin: auto;
 }
-
-
 
 /* ------ PROJECT PAGE STYLING ------  */
 
