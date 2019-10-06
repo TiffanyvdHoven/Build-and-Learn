@@ -144,6 +144,7 @@
       <section class="section" id="sign-up">
         <h2> Sign up </h2>
         <p id="headertext"> Sign up for the build and learn platform and we will contact you. </p>
+        <p id="message"> </p>
         <form action="action_page.php">
 
           <div class="form-div">
@@ -164,7 +165,7 @@
             </select>
           </div>
 
-            <input class="button" type="button" value="Sign Up" onclick="doclick()">
+            <input class="button" type="button" value="Sign Up" onclick="sendForm()">
         </form>
 
       </section>
@@ -176,18 +177,8 @@
     </div>
 
   </main>
-  <script src="script.js"></script>
-  <script>
 
-  function doclick(){
-    if(document.getElementById('name').value != '' && document.getElementById('email').value != '' && document.getElementById('track').value != ''){
-      Swal.fire('Thank you!','Your e-mail was send sucessfully.','success')
-    }
-    else{
-        alert('Please fill in name, e-mail and track');
-    }
-}
-  </script>
+  <script src="script.js"></script>
 
 </body>
 
