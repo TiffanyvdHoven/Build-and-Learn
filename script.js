@@ -13,7 +13,6 @@ document.getElementById("mobile-nav").style.display = 'none';
 
 function sendForm(){
   if(document.getElementById('name').value == ''){
-    // alert("please fill in your name");
     Swal.fire( 'Error','Please fill in your name','error')
   }
   else if(document.getElementById('email').value == ''){
